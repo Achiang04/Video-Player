@@ -1,5 +1,7 @@
 import React from 'react';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {RFPercentage} from 'react-native-responsive-fontsize';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Browse from '../../Screen/Browse/Browse';
 import Video from '../../Screen/Video/Video';
@@ -16,7 +18,11 @@ export default function TabScreen() {
         options={{
           tabBarLabel: 'Video',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'home'} color={color} size={23} />
+            <MaterialIcons
+              name={'movie'}
+              color={color}
+              size={RFPercentage(3)}
+            />
           ),
         }}
         name="Video"
@@ -26,7 +32,11 @@ export default function TabScreen() {
         options={{
           tabBarLabel: 'Audio',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'search'} color={color} size={23} />
+            <Ionicons
+              name={'musical-notes-outline'}
+              color={color}
+              size={RFPercentage(3)}
+            />
           ),
         }}
         name="Audio"
@@ -36,7 +46,11 @@ export default function TabScreen() {
         options={{
           tabBarLabel: 'Browse',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'comment-alt'} color={color} size={23} />
+            <MaterialIcons
+              name={'perm-media'}
+              color={color}
+              size={RFPercentage(3)}
+            />
           ),
         }}
         name="Browse"
@@ -47,7 +61,11 @@ export default function TabScreen() {
           tabBarLabel: 'PlayList',
 
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'bell'} color={color} size={23} />
+            <MaterialIcons
+              name={'playlist-play'}
+              color={color}
+              size={RFPercentage(4)}
+            />
           ),
         }}
         name="PlayList"
@@ -57,7 +75,11 @@ export default function TabScreen() {
         options={{
           tabBarLabel: 'More',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'user-alt'} color={color} size={23} />
+            <MaterialIcons
+              name={'more-horiz'}
+              color={color}
+              size={RFPercentage(4)}
+            />
           ),
         }}
         name="More"
