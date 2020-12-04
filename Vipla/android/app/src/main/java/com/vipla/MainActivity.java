@@ -2,7 +2,7 @@ package com.vipla;
 
 import com.facebook.react.ReactActivity;
 
-public class MainActivity extends ReactActivity implements ReactApplication {
+public class MainActivity extends ReactActivity {
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
@@ -11,12 +11,5 @@ public class MainActivity extends ReactActivity implements ReactApplication {
   @Override
   protected String getMainComponentName() {
     return "Vipla";
-  }
-  @Override
-  protected List<ReactPackage> getPackages() {
-    return Arrays.<ReactPackage>asList(
-      new MainReactPackage(), // <---- add comma
-      new RNFSPackage() // <---------- add package
-    );
   }
 }
